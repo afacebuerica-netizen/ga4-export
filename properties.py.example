@@ -1,0 +1,30 @@
+"""
+GA4 Property Configuration - Example Template.
+
+Copy this file to properties.py and replace with your actual properties.
+
+To find your GA4 Property ID:
+1. Go to Google Analytics 4
+2. Navigate to Admin > Property Settings
+3. Your Property ID is at the top (e.g., '123456789')
+
+Format:
+'properties/PROPERTY_ID': {
+    'name': 'Human-readable website name',
+    'hostname': 'https://www.example.com'
+}
+"""
+
+GA4_PROPERTIES = {
+    # Example property - replace with your actual properties
+    'properties/123456789': {
+        'name': 'Example Website',
+        'hostname': 'https://www.example.com'
+    },
+    # 'properties/987654321': {
+    #     'name': 'Another Website',
+    #     'hostname': 'https://www.another-website.com'
+    # },
+    # Add more properties as needed
+}
+

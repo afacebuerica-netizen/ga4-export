@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Google Cloud credentials
+service-account-key.json
+*.json
+!config.json
+!service-account-key.json.example
+
+# Environment files
+.env
+*.env
+
+# Output files
+*.csv
+GA4_Unified_Report_*.csv
+output/
+
+# Configuration templates (keep these, ignore actual instances)
+!env.example
+!properties.py.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
