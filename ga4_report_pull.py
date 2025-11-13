@@ -263,7 +263,13 @@ def response_to_dataframe(responses: List[Any], property_details: Dict[str, str]
         # Remove the intermediate column
         df = df.drop(columns=['fullPageUrl'])
     
-    print(f"   Transforming data (FullURL construction, column renaming)...")
+    print(f"   Transforming data (FullURL construction, column renaming, date formatting)...")
+
+    # Format Date column from YYYYMMDD to YYYY-MM-DD
+    if 'date' in df.columns:
+        df['date'] = df['date'].apply(
+            lambda x: f"{x[:4]}-{x[4:6]}-{x[6:8]}" if x and len(x) == 8 and x.isdigit() else x
+        )
 
     # Rename columns to clean output names
     df = df.rename(columns=COLUMN_MAPPING)
